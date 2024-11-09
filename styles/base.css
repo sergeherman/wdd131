@@ -1,0 +1,142 @@
+/* Base styles for layout and design */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+/* Style for the header container */
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  /* Style for the header title section */
+  .header-title {
+    background-color: gray;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  /* Style for the header title text */
+  header h1 {
+    margin: 0;
+    color: white;
+  }
+  
+  /* Style for the navigation section */
+  nav {
+    background-color: black;
+  }
+  
+  /* Style for the navigation list */
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 1rem 0;
+    margin: 0;
+  }
+  
+  /* Style for the navigation list items and links */
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+  }
+  
+  
+  nav ul li a:hover {
+    background-color: gray;
+
+  }
+  
+  
+  nav ul li {
+    margin: 0 1rem;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .card {
+    padding: 1rem;
+    border: 1px solid #ddd;
+  }
+  
+  .about-me {
+    width: 66.66%;
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "top-left top-right"
+      "title title"
+      "bottom-left bottom-right";
+    gap: 1rem;
+  }
+  
+  .about-me h2 {
+    background-color: gray;
+    color: white;
+    padding: 0.5rem;
+    margin: 0;
+    text-align: center;
+    grid-area: header;
+    height: 50px; /* Set uniform height for the background */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the text within the gray strip */
+  }
+  
+  .about-me h3 {
+    text-align: center;
+    margin: 0;
+  }
+  
+  .resources h2 {
+    background-color: gray;
+    color: white;
+    padding: 0.5rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px; /* Set uniform height for the background */
+  }
+  
+
+  
+  .resources {
+    width: 33.33%;
+  }
+
+  img {
+    min-width: 50
+    0%;
+    max-width: 80%;
+    height: auto; /* Maintains aspect ratio */
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+  }
+  
