@@ -1,142 +1,172 @@
 /* Base styles for layout and design */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 /* Style for the header container */
 header {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  /* Style for the header title section */
-  .header-title {
-    background-color: gray;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  /* Style for the header title text */
-  header h1 {
-    margin: 0;
-    color: white;
-  }
-  
-  /* Style for the navigation section */
-  nav {
-    background-color: black;
-  }
-  
-  /* Style for the navigation list */
-  nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    padding: 1rem 0;
-    margin: 0;
-  }
-  
-  /* Style for the navigation list items and links */
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    font-weight: bold;
-  }
-  
-  
-  nav ul li a:hover {
-    background-color: gray;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
-  }
-  
-  
-  nav ul li {
-    margin: 0 1rem;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .card {
-    padding: 1rem;
-    border: 1px solid #ddd;
-  }
-  
-  .about-me {
-    width: 66.66%;
-    display: grid;
-    grid-template-areas:
-      "header header"
-      "top-left top-right"
-      "title title"
-      "bottom-left bottom-right";
-    gap: 1rem;
-  }
-  
-  .about-me h2 {
-    background-color: gray;
-    color: white;
-    padding: 0.5rem;
-    margin: 0;
-    text-align: center;
-    grid-area: header;
-    height: 50px; /* Set uniform height for the background */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the text within the gray strip */
-  }
-  
-  .about-me h3 {
-    text-align: center;
-    margin: 0;
-  }
-  
-  .resources h2 {
-    background-color: gray;
-    color: white;
-    padding: 0.5rem;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px; /* Set uniform height for the background */
-  }
-  
+/* Style for the header title section */
+.header-title {
+  background-color: gray;
+  padding: 1rem;
+  text-align: center;
+}
 
-  
-  .resources {
-    width: 33.33%;
-  }
+/* Style for the header title text */
+header h1 {
+  margin: 0;
+  color: white;
+}
 
-  img {
-    min-width: 50
-    0%;
-    max-width: 80%;
-    height: auto; /* Maintains aspect ratio */
-  }
-  
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
-    font-size: 0.9rem;
-  }
-  
+/* Style for the navigation section */
+nav {
+  background-color: black;
+}
+
+/* Style for the navigation list */
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+/* Style for the navigation list items and links */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  background-color: gray;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: flex;
+  gap: 2rem;
+}
+
+.card {
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+.about-me {
+  width: 66.66%;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "top-container"
+    "title"
+    "bottom-container"; /* Stack the sections vertically */
+  gap: 1rem;
+}
+
+.about-me h2 {
+  background-color: gray;
+  color: white;
+  padding: 0.5rem;
+  margin: 0;
+  text-align: center;
+  grid-area: header;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the text within the gray strip */
+}
+
+.about-me h3 {
+  text-align: center;
+  margin: 0;
+  grid-area: title;
+  padding: 1rem; /* Optional: add padding to separate the title */
+}
+
+.resources h2 {
+  background-color: gray;
+  color: white;
+  padding: 0.5rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px; /* Set uniform height for the background */
+}
+
+.resources {
+  width: 33.33%;
+}
+
+img {
+  min-width: 50%;
+  max-width: 80%;
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* New Top Container */
+.top-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns for text and image */
+  gap: 1rem;
+  align-items: center;
+  justify-items: start; /* Aligns text and image to the left side */
+}
+
+.top-left {
+  grid-column: 1; /* Left side */
+}
+
+.top-right {
+  grid-column: 2; /* Right side */
+  max-width: 50%; /* Set max width to maintain proper size */
+}
+
+/* Bottom Container for Image and Paragraph */
+.bottom-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Image on the left and paragraph on the right */
+  gap: 1rem;
+  align-items: center; /* Aligns content vertically in the middle */
+}
+
+.bottom-left {
+  max-width: 50%; /* Set max width for image */
+}
+
+.bottom-right {
+  flex-grow: 1; /* Allow paragraph to grow and fill space */
+  grid-column: 2; /* Make sure the paragraph is on the right */
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  font-size: 0.9rem;
+}

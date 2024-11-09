@@ -6,7 +6,14 @@
   <title>WDD 131 - Dynamic Web Fundamentals - Siarhei Herman</title>
   <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Siarhei Herman - Keyword summary of page content">
   <meta name="author" content="Siarhei Herman">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Link to external CSS -->
   <link rel="stylesheet" href="styles/base.css">
+  
+  <!-- JavaScript File -->
   <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
@@ -28,13 +35,25 @@
 
   <main>
     <section class="card about-me">
-      <h2 style="grid-area: header;">About Me</h2>
-      <p style="grid-area: top-left;">My name is Siarhei Herman. Originally from Belarus, I now live in Warsaw, Poland.</p>
-      <img src="images/image1.png" alt="Profile Image" style="grid-area: top-right;">
-      <h3 style="grid-area: title">Warszawa, Poland</h3>
-      <img src="images/image2.png" alt="Warszawa Image" style="grid-area: bottom-left;">
-      <p style="grid-area: bottom-right;">Warszawa is the capital of Poland with a population of about 2 million residents.</p>
+      <h2>About Me</h2>
+    
+      <!-- Top Container for About Me -->
+      <div class="top-container">
+        <p class="top-left">My name is Siarhei Herman. Originally from Belarus, I now live in Warsaw, Poland.</p>
+        <img src="images/image1.png" alt="Profile Image" class="top-right">
+      </div>
+    
+      <!-- Centered Title -->
+      <h3 class="title">Warszawa, Poland</h3>
+    
+      <!-- Bottom Container for Image and Paragraph -->
+      <div class="bottom-container">
+        <img src="images/image2.png" alt="Warszawa Image" class="bottom-left">
+        <p class="bottom-right">Warszawa is the capital of Poland with a population of about 2 million residents.</p>
+      </div>
     </section>
+    
+    
     
 
     <section class="card resources">
