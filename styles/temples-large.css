@@ -1,0 +1,50 @@
+/* temples-large.css - Desktop view */
+
+@media (min-width: 768px) {
+    /* Header styling for larger screens */
+    header {
+        flex-direction: row;
+    }
+
+    #menu {
+        display: none; /* Hide hamburger menu in large view */
+    }
+
+    /* Display the navigation horizontally */
+    .navigation {
+        display: flex;
+        position: static; /* Remove absolute positioning */
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .navigation ul {
+        display: flex; /* Make the ul a flex container */
+        gap: 1rem; /* Optional: Adds spacing between list items */
+        list-style: none; /* Remove bullet points */
+        margin: 0;
+        padding: 0;
+    }
+
+    .navigation a {
+        padding: 1rem;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .navigation a:hover {
+        background-color: #004466;
+    }
+
+    /* Responsive album grid for larger views */
+    .album {
+        grid-template-columns: repeat(2, 1fr); /* Default to 2 columns */
+    }
+}
+
+/* Larger screens (1024px and above) */
+@media (min-width: 1024px) {
+    .album {
+        grid-template-columns: repeat(3, 1fr); /* Switch to 3 columns */
+    }
+}

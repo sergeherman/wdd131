@@ -1,0 +1,102 @@
+/* temples.css - Mobile-first styles */
+
+/* Reset basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styling with hamburger menu */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #006699;
+    color: #fff;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+/* Hamburger menu button */
+#menu {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰"; /* Hamburger icon */
+}
+
+#menu.open::before {
+    content: "✖"; /* Close icon when menu is open */
+}
+
+/* Navigation styling for mobile - hidden by default */
+.navigation {
+    display: none;
+    flex-direction: column;
+    list-style: none; /* Remove bullet points */
+    background-color: #333;
+    position: absolute;
+    top: 3.5rem; /* Position it below the header */
+    right: 0;
+    left: 0;
+    padding: 1rem;
+}
+
+.navigation a {
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    background-color: #004466;
+}
+
+/* Show the navigation when the open class is added */
+.navigation.open {
+    display: flex;
+}
+
+/* Album grid styling */
+.album {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to 1 column for mobile */
+    gap: 1rem;
+    padding: 1rem;
+}
+
+figure {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+figure img {
+    max-width: 100%; /* Make images fit the figure container */
+    height: auto;
+}
+
+/* Footer styling */
+footer {
+    padding: 1rem;
+    background-color: #006699;
+    color: #fff;
+    text-align: center;
+}
