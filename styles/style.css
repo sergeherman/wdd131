@@ -1,57 +1,60 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
 /* Global Styles */
 :root {
     --primary-color: #ff0000; /* Red */
     --secondary-color: #ffffff; /* White */
     --text-color: #ffffff; /* White text for header and footer */
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-  }
-  
-  /* Header */
-  .header {
+}
+
+/* Header */
+.header {
     background: var(--primary-color);
     text-align: center;
     padding: 1rem 0;
     color: var(--text-color);
-  }
-  
-  /* Footer */
-  footer {
+}
+
+/* Footer */
+footer {
     background: var(--primary-color);
     color: var(--text-color);
     text-align: center;
     padding: 1rem 0;
     margin-top: 1rem;
-  }
-  
-  /* Hero Container */
-  .hero-container {
+}
+
+/* Hero Container */
+.hero-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-  }
-  
-  .hero {
+}
+
+.hero {
     width: 100%;
     display: block;
     max-width: 100%;
-  }
-  
-  @media (max-width: 767px) {
+}
+
+@media (max-width: 767px) {
     .hero {
-      padding-top: 5px; /* Add padding on mobile view */
+        padding-top: 5px; /* Add padding on mobile view */
     }
-  }
-  
-  /* Data and Weather Sections */
-  .container {
+}
+
+/* Data and Weather Sections */
+.container {
     width: 90%;
     padding: 1rem;
     background-color: var(--primary-color);
@@ -59,71 +62,93 @@
     border-radius: 8px;
     color: var(--secondary-color);
     margin: 10px 0;
-  }
-  
-  .data {
+}
+
+.data {
     order: 2;
-  }
-  
-  .weather {
+}
+
+.weather {
     order: 3;
-  }
-  
-  /* Title Containers */
-  .title-container {
+}
+
+/* Title Containers */
+.title-container {
     border: 2px solid var(--primary-color);
     background-color: var(--secondary-color);
     color: var(--primary-color);
     padding: 0.5rem;
     text-align: center;
     height: 70%; /* Reduced height */
-  }
-  
+}
+
+@media (max-width: 767px) {
+    .title-container {
+        background-color: var(--primary-color); /* Red background */
+        color: var(--secondary-color); /* White font */
+    }
+
+    /* Add SVG icon below Weather title */
+    .weather .title-container h2::after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 10px auto 0;
+        background: url('../images/weather-icon.svg') no-repeat center center;
+        background-size: contain;
+    }
+}
+
 /* Grid Layout */
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Equal widths for both columns */
     gap: 0.5rem;
-  }
-  
-  .bold {
+}
+
+.bold {
     font-weight: bold;
     text-align: right;
-  }
-  
-  .normal {
+}
+
+.normal {
     text-align: left;
-  }
-  
-  
-  /* Responsive Design */
-  @media (min-width: 768px) {
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
     .hero-container {
-      position: relative;
+        position: relative;
     }
-  
+
     .container {
-      position: absolute;
-      width: 27%;
+        position: absolute;
+        width: 27%;
     }
-  
+
     .data {
-      top: 10px;
-      left: 10px;
-      order: 0;
+        top: 10px;
+        left: 10px;
+        order: 0;
     }
-  
+
     .weather {
-      bottom: 10px;
-      right: 10px;
-      order: 0;
+        bottom: 10px;
+        right: 10px;
+        order: 0;
     }
-  
+
     .title-container {
-      position: relative;
-      margin-left: -25px; /* Desktop only */
-      width: calc(100% - 60px);
-      text-align: left;
+        position: relative;
+        margin-left: -25px; /* Desktop only */
+        width: calc(100% - 60px);
+        text-align: left;
     }
-  }
-  
+
+    .weather .title-container h2::after {
+        content: '⛅'; /* Weather icon emoji */
+        font-size: 1.5rem;
+        margin-left: 10px;
+    }
+}

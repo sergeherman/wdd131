@@ -3,54 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Poland</title>
+  <meta name="author" content="Siarhei Herman">
+  <meta name="description" content="A dynamic web page created for the WDD 131 course showcasing Poland's data and weather information.">
+  <title>WDD 131 - Dynamic Web Fundamentals - W03 Assignment - Siarhei Herman</title>
+  
+  
   <link rel="stylesheet" href="styles/style.css">
   <script src="scripts/script.js" defer></script>
 </head>
 <body>
-  <!-- Header/Navbar -->
+  <!-- Header -->
   <header class="header">
     <h1>Poland</h1>
   </header>
+  
+  <!-- Main Content -->
+  <main>
+    <!-- Parent Container for Image and Sections -->
+    <div class="hero-container">
+      <!-- Hero Section -->
+      <picture>
+        <source srcset="images/hero-desktop.webp" media="(min-width: 768px)">
+        <img src="images/hero-mobile.webp" alt="Scenic view of Poland" class="hero">
+      </picture>
 
-  <!-- Parent Container for Image and Sections -->
-  <div class="hero-container">
-    <!-- Hero Section -->
-    <picture>
-      <source srcset="images/hero-desktop.webp" media="(min-width: 768px)">
-      <img src="images/hero-mobile.webp" alt="Scenic view of Poland" class="hero">
-    </picture>
+      <!-- Data Section -->
+      <section class="container data">
+        <div class="title-container">
+          <h2>Data</h2>
+        </div>
+        <div class="grid">
+          <div class="bold">Area:</div> <div class="normal">312,696 sq km</div>
+          <div class="bold">Population:</div> <div class="normal">38,383,000</div>
+          <div class="bold">Capital:</div> <div class="normal">Warsaw</div>
+          <div class="bold">Language:</div> <div class="normal">Polish</div>
+          <div class="bold">Currency:</div> <div class="normal">Polish Złoty</div>
+          <div class="bold">Time Zone:</div> <div class="normal">UTC+1</div>
+          <div class="bold">Calling Code:</div> <div class="normal">+48</div>
+          <div class="bold">Internet TLD:</div> <div class="normal">.pl</div>
+        </div>
+      </section>
 
-    <!-- Data Section -->
-    <section class="container data">
-      <div class="title-container">
-        <h2>Data</h2>
-      </div>
-      <div class="grid">
-        <div class="bold right">Area:</div> <div class="normal left">312,696 sq km</div>
-        <div class="bold right">Population:</div> <div class="normal left">38,383,000</div>
-        <div class="bold right">Capital:</div> <div class="normal left">Warsaw</div>
-        <div class="bold right">Language:</div> <div class="normal left">Polish</div>
-        <div class="bold right">Currency:</div> <div class="normal left">Polish Złoty</div>
-        <div class="bold right">Time Zone:</div> <div class="normal left">UTC+1</div>
-        <div class="bold right">Calling Code:</div> <div class="normal left">+48</div>
-        <div class="bold right">Internet TLD:</div> <div class="normal left">.pl</div>
-      </div>
-    </section>
-
-    <!-- Weather Section -->
-    <section class="container weather">
-      <div class="title-container">
-        <h2>Weather</h2>
-      </div>
-      <div class="grid">
-        <div class="bold right">Temperature:</div> <div class="normal left">5°C</div>
-        <div class="bold right">Conditions:</div> <div class="normal left">Partly Cloudy</div>
-        <div class="bold right">Wind:</div> <div class="normal left">10 km/h</div>
-        <div class="bold right">Wind Chill:</div> <div class="normal left" id="windChill">N/A</div>
-      </div>
-    </section>
-  </div>
+      <!-- Weather Section -->
+      <section class="container weather">
+        <div class="title-container">
+          <h2>Weather</h2>
+          <div class="icon" aria-hidden="true"></div> <!-- Pseudo-element for weather icon -->
+        </div>
+        <div class="grid">
+          <div class="bold">Temperature:</div> <div class="normal">5°C</div>
+          <div class="bold">Conditions:</div> <div class="normal">Partly Cloudy</div>
+          <div class="bold">Wind:</div> <div class="normal">10 km/h</div>
+          <div class="bold">Wind Chill:</div> <div class="normal" id="windChill">N/A</div>
+        </div>
+      </section>
+    </div>
+  </main>
 
   <!-- Footer -->
   <footer>
