@@ -1,0 +1,129 @@
+/* Global Styles */
+:root {
+    --primary-color: #ff0000; /* Red */
+    --secondary-color: #ffffff; /* White */
+    --text-color: #ffffff; /* White text for header and footer */
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  /* Header */
+  .header {
+    background: var(--primary-color);
+    text-align: center;
+    padding: 1rem 0;
+    color: var(--text-color);
+  }
+  
+  /* Footer */
+  footer {
+    background: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+  
+  /* Hero Container */
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .hero {
+    width: 100%;
+    display: block;
+    max-width: 100%;
+  }
+  
+  @media (max-width: 767px) {
+    .hero {
+      padding-top: 5px; /* Add padding on mobile view */
+    }
+  }
+  
+  /* Data and Weather Sections */
+  .container {
+    width: 90%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    opacity: 0.8;
+    border-radius: 8px;
+    color: var(--secondary-color);
+    margin: 10px 0;
+  }
+  
+  .data {
+    order: 2;
+  }
+  
+  .weather {
+    order: 3;
+  }
+  
+  /* Title Containers */
+  .title-container {
+    border: 2px solid var(--primary-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.5rem;
+    text-align: center;
+    height: 70%; /* Reduced height */
+  }
+  
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Equal widths for both columns */
+    gap: 0.5rem;
+  }
+  
+  .bold {
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  .normal {
+    text-align: left;
+  }
+  
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .hero-container {
+      position: relative;
+    }
+  
+    .container {
+      position: absolute;
+      width: 27%;
+    }
+  
+    .data {
+      top: 10px;
+      left: 10px;
+      order: 0;
+    }
+  
+    .weather {
+      bottom: 10px;
+      right: 10px;
+      order: 0;
+    }
+  
+    .title-container {
+      position: relative;
+      margin-left: -25px; /* Desktop only */
+      width: calc(100% - 60px);
+      text-align: left;
+    }
+  }
+  

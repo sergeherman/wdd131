@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudo-element Example</title>
+  <style>
+    /* Style the first letter of a paragraph */
+    p::first-letter {
+      font-size: 2em;
+      color: red;
+    }
+
+        /* Insert content before an element */
+        p::before {
+      content: "Tarara: ";
+      color: pink;
+    }
+
+    /* Insert content before an element */
+    div::before {
+      content: "Before text: ";
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <p>This is a paragraph where the first letter will be styled differently.</p>
+  
+  <div>This is a div with content inserted before it.</div>
+</body>
+</html>

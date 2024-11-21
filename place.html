@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poland</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+  <!-- Header/Navbar -->
+  <header class="header">
+    <h1>Poland</h1>
+  </header>
+
+  <!-- Parent Container for Image and Sections -->
+  <div class="hero-container">
+    <!-- Hero Section -->
+    <picture>
+      <source srcset="images/hero-desktop.webp" media="(min-width: 768px)">
+      <img src="images/hero-mobile.webp" alt="Scenic view of Poland" class="hero">
+    </picture>
+
+    <!-- Data Section -->
+    <section class="container data">
+      <div class="title-container">
+        <h2>Data</h2>
+      </div>
+      <div class="grid">
+        <div class="bold right">Area:</div> <div class="normal left">312,696 sq km</div>
+        <div class="bold right">Population:</div> <div class="normal left">38,383,000</div>
+        <div class="bold right">Capital:</div> <div class="normal left">Warsaw</div>
+        <div class="bold right">Language:</div> <div class="normal left">Polish</div>
+        <div class="bold right">Currency:</div> <div class="normal left">Polish Złoty</div>
+        <div class="bold right">Time Zone:</div> <div class="normal left">UTC+1</div>
+        <div class="bold right">Calling Code:</div> <div class="normal left">+48</div>
+        <div class="bold right">Internet TLD:</div> <div class="normal left">.pl</div>
+      </div>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="container weather">
+      <div class="title-container">
+        <h2>Weather</h2>
+      </div>
+      <div class="grid">
+        <div class="bold right">Temperature:</div> <div class="normal left">5°C</div>
+        <div class="bold right">Conditions:</div> <div class="normal left">Partly Cloudy</div>
+        <div class="bold right">Wind:</div> <div class="normal left">10 km/h</div>
+        <div class="bold right">Wind Chill:</div> <div class="normal left" id="windChill">N/A</div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Siarhei Herman - Poland</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
