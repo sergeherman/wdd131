@@ -82,23 +82,27 @@ footer {
     height: 70%; /* Reduced height */
 }
 
+/* Hide SVG icon by default */
+.weather-icon {
+    display: none;
+}
+
+/* Show SVG icon only in mobile view */
 @media (max-width: 767px) {
+    .weather-icon {
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 10px auto 0; /* Center the icon */
+    }
+
+
     .title-container {
         background-color: var(--primary-color); /* Red background */
         color: var(--secondary-color); /* White font */
     }
-
-    /* Add SVG icon below Weather title */
-    .weather .title-container h2::after {
-        content: '';
-        display: block;
-        width: 40px;
-        height: 40px;
-        margin: 10px auto 0;
-        background: url('../images/weather-icon.svg') no-repeat center center;
-        background-size: contain;
-    }
 }
+
 
 /* Grid Layout */
 .grid {

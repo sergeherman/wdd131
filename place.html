@@ -7,6 +7,10 @@
   <meta name="description" content="A dynamic web page created for the WDD 131 course showcasing Poland's data and weather information.">
   <title>WDD 131 - Dynamic Web Fundamentals - W03 Assignment - Siarhei Herman</title>
   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
   
   <link rel="stylesheet" href="styles/style.css">
   <script src="scripts/script.js" defer></script>
@@ -48,7 +52,7 @@
       <section class="container weather">
         <div class="title-container">
           <h2>Weather</h2>
-          <div class="icon" aria-hidden="true"></div> <!-- Pseudo-element for weather icon -->
+          <img src="images/weather-icon.svg" alt="Weather Icon" class="weather-icon">
         </div>
         <div class="grid">
           <div class="bold">Temperature:</div> <div class="normal">5°C</div>
@@ -57,6 +61,7 @@
           <div class="bold">Wind Chill:</div> <div class="normal" id="windChill">N/A</div>
         </div>
       </section>
+      
     </div>
   </main>
 
