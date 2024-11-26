@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+}
+
+/* Keyframes for the fade-in effect */
+@keyframes fadeInFromBlack {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* General image styling */
+img {
+    width: 400px;
+    height: 600px;
+    display: block;
+    margin: 20px auto;
+    opacity: 0; /* Start fully transparent */
+    animation: none; /* No animation by default */
+}
+
+/* Apply fade-in animation when the image is loaded */
+img[loading="lazy"][loaded="true"] {
+    animation: fadeInFromBlack 2s ease-in-out forwards;
+}
+
+
+/* Optional: Add a placeholder while the image loads */
+img[loading="lazy"]:not([loaded]) {
+    background-color: #000; /* Black background for fade-in effect */
+    border: 1px solid #ccc;
+}
