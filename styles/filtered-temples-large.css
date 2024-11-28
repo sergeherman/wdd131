@@ -1,0 +1,49 @@
+/* Larger screens: 768px and above */
+@media (min-width: 768px) {
+    /* Header styling */
+    header {
+        flex-direction: row; /* Horizontal layout */
+    }
+
+    #menu {
+        display: none; /* Hide hamburger menu */
+    }
+
+    /* Navigation: horizontal layout */
+    .navigation {
+        display: flex;
+        position: static; /* Remove absolute positioning */
+        background-color: transparent;
+        padding: 0;
+        gap: 1rem;
+    }
+
+    .navigation ul {
+        display: flex; /* Horizontal navigation items */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navigation a {
+        padding: 1rem;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .navigation a:hover {
+        background-color: #004466;
+    }
+
+    /* Album grid for larger screens */
+    .album {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+}
+
+/* Larger screens: 1024px and above */
+@media (min-width: 1024px) {
+    .album {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for wide screens */
+    }
+}

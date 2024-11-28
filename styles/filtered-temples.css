@@ -1,0 +1,135 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #006699;
+    color: #fff;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+/* Hamburger menu button */
+#menu {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰"; /* Hamburger icon */
+}
+
+#menu.open::before {
+    content: "✖"; /* Close icon */
+}
+
+/* Navigation */
+.navigation {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 3.5rem;
+    right: 0;
+    left: 0;
+    padding: 1rem;
+    list-style: none;
+}
+
+.navigation a {
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    background-color: #004466;
+}
+
+/* Show navigation when menu is open */
+.navigation.open {
+    display: flex;
+}
+
+/* Album grid */
+.album {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to one column for mobile */
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.album figure {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+figcaption {
+    font-size: 1.17em; /* Matches the default size of h3 */
+    font-weight: bold;
+    margin: 1em 0; /* Optional: Add spacing like an h3 */
+}
+
+/* Image styles */
+.album figure img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Show the full image vertically */
+    max-height: 300px;
+}
+
+/* Title and details styling */
+.album h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.album p {
+    margin-bottom: 0.3rem;
+}
+
+/* Footer */
+footer {
+    padding: 1rem;
+    background-color: #006699;
+    color: #fff;
+    text-align: center;
+}
+
+/* Responsive styles */
+
+/* Medium screens: 768px and above */
+@media (min-width: 768px) {
+    .album {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+}
+
+/* Large screens: 1024px and above */
+@media (min-width: 1024px) {
+    .album {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for large screens */
+    }
+}
