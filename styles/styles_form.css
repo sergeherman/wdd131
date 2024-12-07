@@ -1,6 +1,9 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -19,6 +22,7 @@ main {
 h1 {
     font-size: 1.5em;
     text-align: center;
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
 form {
@@ -37,12 +41,14 @@ textarea, select, input[type="text"], input[type="date"], button {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
 button {
     background-color: #007bff;
     color: white;
     font-size: 1em;
+    font-family: 'Roboto', Arial, sans-serif;
     cursor: pointer;
 }
 

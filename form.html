@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Submit your product reviews, rate features, and share your feedback with this simple and user-friendly form.">
+    <meta name="author" content="Siarhei Herman">
     <title>Product Review Form</title>
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Link to Stylesheet -->
     <link rel="stylesheet" href="styles/styles_form.css">
+
+    <!-- Script -->
     <script defer src="scripts/script_form.js"></script>
 </head>
 <body>
@@ -15,35 +25,35 @@
             <label for="product-name">Product Name:</label>
             <select id="product-name" name="product-name" required>
                 <option value="" disabled selected>Choose a Product...</option>
+                <!-- Options dynamically added via JavaScript -->
             </select>
 
-<!-- Overall Rating -->
-<fieldset>
-    <legend>Overall Rating:</legend>
-    <div class="rating-container">
-        <div class="rating-group">
-            <label for="rating-1">☆</label>
-            <input type="radio" id="rating-1" name="rating" value="1" required>
-        </div>
-        <div class="rating-group">
-            <label for="rating-2">☆☆</label>
-            <input type="radio" id="rating-2" name="rating" value="2">
-        </div>
-        <div class="rating-group">
-            <label for="rating-3">☆☆☆</label>
-            <input type="radio" id="rating-3" name="rating" value="3">
-        </div>
-        <div class="rating-group">
-            <label for="rating-4">☆☆☆☆</label>
-            <input type="radio" id="rating-4" name="rating" value="4">
-        </div>
-        <div class="rating-group">
-            <label for="rating-5">☆☆☆☆☆</label>
-            <input type="radio" id="rating-5" name="rating" value="5">
-        </div>
-    </div>
-</fieldset>
-
+            <!-- Overall Rating -->
+            <fieldset>
+                <legend>Overall Rating:</legend>
+                <div class="rating-container">
+                    <div class="rating-group">
+                        <label for="rating-1">☆</label>
+                        <input type="radio" id="rating-1" name="rating" value="1" required>
+                    </div>
+                    <div class="rating-group">
+                        <label for="rating-2">☆☆</label>
+                        <input type="radio" id="rating-2" name="rating" value="2">
+                    </div>
+                    <div class="rating-group">
+                        <label for="rating-3">☆☆☆</label>
+                        <input type="radio" id="rating-3" name="rating" value="3">
+                    </div>
+                    <div class="rating-group">
+                        <label for="rating-4">☆☆☆☆</label>
+                        <input type="radio" id="rating-4" name="rating" value="4">
+                    </div>
+                    <div class="rating-group">
+                        <label for="rating-5">☆☆☆☆☆</label>
+                        <input type="radio" id="rating-5" name="rating" value="5">
+                    </div>
+                </div>
+            </fieldset>
 
             <!-- Date of Installation -->
             <label for="installation-date">Date of Installation:</label>
@@ -71,7 +81,7 @@
         </form>
     </main>
     <footer>
-        <p>&copy; 2024 Siarhei Herman </p>
+        <p>&copy; 2024 Siarhei Herman</p>
     </footer>
 </body>
 </html>
