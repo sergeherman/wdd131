@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333; /* Ensures sufficient contrast for text */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #555; /* Dark Gray */
+    color: #fff;
+    padding: 1.5em;
+    text-align: center;
+}
+
+/* Main Sections */
+section {
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h2 {
+    color: #555; /* Dark Gray */
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+/* Footer */
+footer {
+    background-color: #555; /* Dark Gray */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px; /* Allows scrolling, not fixed */
+}
+
+/* Images */
+img {
+    display: block;
+    margin: 15px auto;
+    max-width: 100%;
+    height: auto; /* Responsive images */
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Buttons (optional improvement for future development) */
+button, a {
+    background-color: #555; /* Dark Gray */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover, a:hover {
+    background-color: #333; /* Slightly darker shade on hover */
+}
